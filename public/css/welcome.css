@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.bottom-social {
+    position: absolute;
+    bottom: 20px;
+    align-items: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    font-size: 10px;
+}
+
+.content {
+    text-align: center;
+}
+
+.developed {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 100px;
+    color: black;
+}
+
+.links {
+    float: left;
+    display: flex;
+    height: 45px;
+    width: 100px;
+}
+
+.links > a {
+    color: #636b6f;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.socailLink {
+    height: 100%;
+    width: 100%;
+}
+
+.socialLogo {
+    height: 75%;
+    width: 75%;
+}
+
+.socialLogo:hover {
+    height: 80%;
+    width: 80%;
+}
