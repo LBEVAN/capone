@@ -95,7 +95,7 @@
         <div class="flex-center position-ref full-height">
 
             <div class="content">
-                <img src="../images/logo.png">
+                <img src="..\images\logo.png">
 
                 <div class="developed m-b-md">
                 <br>
@@ -106,10 +106,10 @@
 
             <div class="bottom-social links">
                 <div class="socialLink">
-                    <a href="https://www.facebook.com/Capone-Clothing-1721731367854219/" target="_blank"> <img class="socialLogo" src="../images/Socials/facebook.png"> </a>
+                    <a href="https://www.facebook.com/Capone-Clothing-1721731367854219/" target="_blank"> <img class="socialLogo" src="..\images\Socials\facebook.png"> </a>
                 </div>
                 <div class="socialLink">
-                    <a href="https://www.instagram.com/caponeclothing/" target="_blank"> <img class="socialLogo" src="../images/Socials/instagram.png"> </a>
+                    <a href="https://www.instagram.com/caponeclothing/" target="_blank"> <img class="socialLogo" src="..\images\Socials\instagram.png"> </a>
                 </div>
             </div>
 
