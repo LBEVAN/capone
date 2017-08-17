@@ -33,7 +33,7 @@ html, body {
 .footer {
     position: absolute;
     bottom: 5px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .content {
@@ -41,12 +41,18 @@ html, body {
 }
 
 .developed {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 18px;
+    
 }
 
-.company {
+.company-large {
     font-size: 100px;
+    color: black;
+
+}
+
+.company-small {
+    font-size: 36px;
     color: black;
 }
 

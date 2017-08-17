@@ -13,10 +13,16 @@
         <div class="flex-center position-ref full-height">
 
             <div class="content">
-                <div class="company m-b-md">
-                    CAPONE CLOTHING
+                <div class="company-large m-b-md">
+                    CAPONE 
+                    <div class="company-small">
+                        CLOTHING
+                    </div>
                 </div>
                 
+                </br>
+                </br>
+
                 <div class="developed m-b-md">
                     COMING SOON
                 </div>
