@@ -114,7 +114,7 @@
             </div>
 
             <div class="footer">
-                Created by: LBevan & MBrain of 2BDeveloped ltd
+                Created by: 2BDeveloped Ltd
             </div>
         </div>
     </body>
