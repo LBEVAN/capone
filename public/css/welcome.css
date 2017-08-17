@@ -43,15 +43,6 @@ html, body {
     color: black;
 }
 
-.links > a {
-    color: #636b6f;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 .m-b-md {
     margin-bottom: 30px;
 }
@@ -62,7 +53,6 @@ html, body {
     bottom: 0;
     left: 0;
     padding: 15px;
-    /*background-color: #efefef;*/
     text-align: center;
     font-size: 12px;
 }
@@ -76,6 +66,8 @@ html, body {
 
 .footer-social > a {
     padding-left: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .footer-info {
