@@ -30,12 +30,16 @@
 
             <div class="footer">
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/Capone-Clothing-1721731367854219/" target="_blank"> 
-                        <img class="social-icon" src="images/social/facebook.png"> 
-                    </a>
-                    <a href="https://www.instagram.com/caponeclothing/" target="_blank"> 
-                        <img class="social-icon" src="images/social/instagram.png">
-                    </a>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/Capone-Clothing-1721731367854219/" target="_blank"> 
+                            <img class="social-icon" src="images/social/facebook.png"> 
+                        </a>
+                    </div>
+                    <div class="social-link">
+                        <a href="https://www.instagram.com/caponeclothing/" target="_blank"> 
+                            <img class="social-icon" src="images/social/instagram.png">
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer-info">
