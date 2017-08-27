@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', array('as' => '/', function() {
+    return view('page/home');
+}));
+
+Route::get('store', array('as' => 'store', function() {
+    return view('page/store');
+}));
+
+Route::get('contact', array('as' => 'contact', function() {
+    return view('page/contact');
+}));

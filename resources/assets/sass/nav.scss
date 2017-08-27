@@ -1,0 +1,9 @@
+nav {
+    @extend nav;
+    font-size: 2rem;
+}
+
+.navbar-brand {
+    @extend .navbar-brand;
+    font-size: 3rem;
+}
