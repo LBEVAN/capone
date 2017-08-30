@@ -775,7 +775,8 @@ module.exports = Cancel;
 __webpack_require__(9);
 __webpack_require__(40);
 __webpack_require__(41);
-module.exports = __webpack_require__(42);
+__webpack_require__(42);
+module.exports = __webpack_require__(43);
 
 
 /***/ }),
@@ -41802,7 +41803,7 @@ var Component = __webpack_require__(37)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "D:\\Development\\Source\\capone\\resources\\assets\\js\\components\\Example.vue"
+Component.options.__file = "D:\\Development\\Projects\\capone\\resources\\assets\\js\\components\\Example.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -41994,6 +41995,12 @@ if (false) {
 
 /***/ }),
 /* 42 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 43 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

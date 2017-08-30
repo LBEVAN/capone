@@ -1,0 +1,63 @@
+@import '_variables';
+
+.jumbotron {
+    @extend .jumbotron;
+    background-color: #ebedef;
+    margin-top: 40px;
+}
+
+footer {
+    border-top: solid #999999 1px;
+    padding-top: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.footer > a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+}
+
+.footer > a:hover {
+    color: $text-color;
+    text-decoration: none;
+}
+
+.footer-links {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.footer-links > a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+}
+
+.footer-links > a:hover {
+    color: #7A7A7A;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    padding-top: 20px;
+    font-size: 12px;
+    color: black;
+}
+
+.footer-copyright > a {
+    color: black;
+}
+
+.footer-copyright > a:hover {
+    color: #7A7A7A;
+}
+
+.company-text {
+    font-size: 8px;
+}

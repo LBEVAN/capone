@@ -8,6 +8,7 @@
         @section('head')
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
             <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
         @show
         
         <title>Capone Clothing</title>  
@@ -17,9 +18,11 @@
         
         @include('component.nav')
 
-        <div class="container" style="padding-top: 50px;">
+        <div class="container" style="padding-top: 50px; padding-bottom:15px;">
             @yield('content')
         </div>
+
+        @include('component.footer')
 
     </body>
 </html>
