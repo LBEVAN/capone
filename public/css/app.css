@@ -11403,3 +11403,13 @@ button.close {
   clip: auto;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+

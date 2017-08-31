@@ -18,11 +18,14 @@
         
         @include('component.nav')
 
-        <div class="container" style="padding-top: 50px; padding-bottom:15px;">
+        <div class="container" style="min-height: 100%; margin-bottom: -200px; padding-top: 50px; padding-bottom:15px;">
             @yield('content')
+
+            <div class="push"></div>
         </div>
 
-        @include('component.footer')
-
+        <footer class="footer">
+            @include('component.footer')
+        </footer>
     </body>
 </html>

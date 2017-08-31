@@ -10,3 +10,12 @@
 
 // Font-Awesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
