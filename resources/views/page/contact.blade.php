@@ -57,12 +57,12 @@
                                     <textarea name="message" id="message" class="form-control" rows="8" cols="25" required="required"placeholder="Message"></textarea>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                                    Send Message
-                                </button>
-                            </div>
+                        <div class="col-md-12" style="padding-top: 20px;">
+                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                                Send Message
+                            </button>
                         </div>
                     </form>
                 </div>
