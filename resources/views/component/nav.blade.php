@@ -10,7 +10,7 @@
                 </button>
                 <a class="navbar-brand" href="{{ route('/') }}">Capone Clothing</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse" style="padding-left:15px;">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('store') }}">Store</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
