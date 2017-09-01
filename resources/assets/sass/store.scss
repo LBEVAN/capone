@@ -1,0 +1,101 @@
+.itemStore {
+    font-size: 1em;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border: solid 0.5px lightgrey;
+    border-radius: 0.5rem;
+}
+
+.itemStore-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 0.25em;
+    padding-top: 1.5em;
+}
+
+.itemStore-img-top {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.itemStore-title {
+    display: inline;
+    font-size: 1.28571429em;
+    font-weight: 700;
+    padding-left: .75em;
+}
+
+.itemStore-price {
+    float: right;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .68);
+    padding-right: .75em;
+}
+
+.itemStore-footer {
+    font-size: 1em;
+    position: static;
+    top: 0;
+    left: 0;
+    padding: .75em .75em;
+    color: rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    background: #fff;
+}
+
+.footer-left {
+    display: inline-flex;
+    width: 62.5%;
+}
+
+.footer-right {
+    text-align: right;
+    float: right;
+    width: 32.5%;
+}
+
+.itemStore-inverse .btn {
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.profile {
+    position: absolute;
+    top: -15px;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.profile-avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-inline {
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+
+.profile-inline ~ .itemStore-title {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: top;
+}
+
+.text-bold {
+    font-weight: 700;
+}
