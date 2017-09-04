@@ -8,15 +8,50 @@
 
 .home-header {
     text-align: center;
+    border-bottom: dashed 0.5px lightgrey;
 }
 
 .home-header-heavy {
     font-size: 9.5rem;
     color: black;
+    padding-bottom: 5px;
 }
 
 .home-header-light {
     font-size: 3.5rem;
     color: black;
     margin-top: -40px;
+}
+
+.profile {
+    text-align: center;
+    top: -15px;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #fff;
+    border-radius: 25%;
+}
+
+.profile-avatar {
+    display: block;
+    width: 80%;
+    height: 80%;
+    border-radius: 25%;
+}
+
+img[alt="profile-avatar"] {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 2s ease;
+}
+
+img[alt="profile-avatar"]:hover {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
 }

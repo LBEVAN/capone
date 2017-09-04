@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-    <div class="page-header">Store</div>
+    <div class="store-header">Products</div>
 
     <div class="row">
         @foreach($products as $product)

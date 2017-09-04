@@ -1,5 +1,14 @@
 @import '_variables';
 
+.store-header {
+    padding-top: 10px;
+    text-align:center;
+    padding-bottom: 10px;
+    font-size: 4.5rem;
+    font-weight: 900;
+    border-bottom: dashed 0.5px lightgrey;
+}
+
 .product {
     font-size: 1em;
     overflow: hidden;
@@ -77,4 +86,17 @@
     width: 100%;
     height: auto;
     border-radius: 50%;
+}
+
+div[alt="itemStore"] {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 0.5s ease;
+
+}
+div[alt="itemStore"]:hover {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
