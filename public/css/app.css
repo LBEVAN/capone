@@ -11413,3 +11413,10 @@ body {
   margin: 0;
 }
 
+.page-header {
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+

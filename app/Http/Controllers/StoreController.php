@@ -26,14 +26,12 @@ class StoreController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $name
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show($name) {
+        $product = $this->productRepository->getProductByName($name);
 
-        // TODO: this
-        // $product = Product::find($id);
-
-        // return View::make('store.show')->with('product', $product);
+        return View::make('store.show')->with('product', $product);
     }
 }

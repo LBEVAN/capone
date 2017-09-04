@@ -12,7 +12,7 @@
         @foreach($products as $product)
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="product">
-                    <a href="{{ route('contact') }}">
+                    <a href="{{ route('store.show', $product) }}">
                         <img src="images/items/babyPinkHoodie1.png">
                     </a>
                     <div class="product-block">
