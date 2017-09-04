@@ -1,25 +1,21 @@
 @import '_variables';
 
-.jumbotron {
-    @extend .jumbotron;
-    background-color: #ebedef;
-    margin-top: 40px;
-}
-
 .home-header {
     text-align: center;
-    border-bottom: dashed 0.5px lightgrey;
+    border-bottom: solid 1px $border-color;
+    margin-bottom: 35px;
+    padding-bottom: 10px;
 }
 
 .home-header-heavy {
     font-size: 9.5rem;
-    color: black;
+    color: $text-color;
     padding-bottom: 5px;
 }
 
 .home-header-light {
     font-size: 3.5rem;
-    color: black;
+    color: $text-color;
     margin-top: -40px;
 }
 

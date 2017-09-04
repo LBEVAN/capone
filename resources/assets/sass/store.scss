@@ -1,19 +1,9 @@
 @import '_variables';
 
-.store-header {
-    padding-top: 10px;
-    text-align:center;
-    padding-bottom: 10px;
-    font-size: 4.5rem;
-    font-weight: 900;
-    border-bottom: dashed 0.5px lightgrey;
-}
-
 .product {
     font-size: 1em;
     overflow: hidden;
     margin-bottom: 20px;
-    margin-top: 20px;
     padding-top: 10px;
     border: solid 0.5px $panel-default-border;
 }

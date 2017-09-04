@@ -7,11 +7,9 @@
 
 @section('content')
 <div class="content-fluid">
-    <div class="contact-header">
-        Contact Us
-    </div>
+    <div class="page-header">Contact Us</div>
 
-    <div class="row" style="text-align: left; margin-top: 20px;">
+    <div class="row">
         <div class="col-md-12">
             <form>
                 <div class="row">

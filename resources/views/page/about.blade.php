@@ -7,11 +7,11 @@
 
 @section('content')
 <div class="content-fluid">
-    <div class="about-header">
+    <div class="page-header">
         About
     </div>
 
-    <div class="container" style="text-align: left; margin-top: 20px;">
+    <div class="container">
         
     </div>
 </div>
