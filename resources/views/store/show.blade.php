@@ -9,11 +9,12 @@
     <form method="POST">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-4">
+
+                <div class="col-sm-12 col-md-4 col-lg-4" style="text-align: -webkit-center;">
                     <img src="{{ '../' . $product->imagePath }}">
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-sm-12 col-md-8 col-lg-8">
                     <div class="product-title">{{ $product->name }}</div>
                     <div class="product-description">
                         @foreach(explode(',', $product->description) as $descLine)
@@ -21,14 +22,14 @@
                         @endforeach
                     </div>
                     <div>
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-5 col-lg-5" style="margin-bottom:20px;">
                             <select id="size" name="size" class="form-control" required="required">
                                 @foreach($product->productStock as $productStock)
                                     <option value="{{ $productStock->size->code }}">{{ $productStock->size->description }}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
                             <button class="btn btn-primary btn-block">Add to Basket</button>
                         </div>
                     </div>
