@@ -29,14 +29,14 @@
     height: 100%;
     margin: 0;
     border: 1px solid #fff;
-    border-radius: 25%;
+    border-radius: 15%;
 }
 
 .profile-avatar {
     display: block;
     width: 80%;
     height: 80%;
-    border-radius: 25%;
+    border-radius: 15%;
 }
 
 img[alt="profile-avatar"] {
@@ -50,4 +50,37 @@ img[alt="profile-avatar"]:hover {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+
+.carousel {
+    width: 100%;
+    height: auto;
+}
+
+.carousel .item {
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+}
+
+#caponeCarousel {
+    width: 100%;
+    height: auto;
+}
+
+.panel {
+    text-align: -webkit-center;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #fff;
+    border-radius: 15%;
+}
+
+.panel-avatar {
+    display: block;
+    width: 80%;
+    height: 80%;
+    border-radius: 15%;
 }
