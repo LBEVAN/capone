@@ -16,12 +16,7 @@
                     <li><a href="{{ route('socials') }}">Socail Media</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- <li><a href="#">Test1</a></li> -->
-                    <!-- <li><a href="#">Test2</a></li>  -->
-                    <!-- use the following on an <li> tag for active screen: class="active" style="padding-right:15px;" -->
-                </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
     </nav>
 @show

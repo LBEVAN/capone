@@ -45,7 +45,7 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-md-5">
+        <div class="col-sm-12 col-md-6 col-lg-6">
             <h2 class="featurette-heading">Swansea's Next Fitness Model</h2>
             <p class="lead">
                 This year we will be sponsoring the Swansea Next Fitness Model.
@@ -59,9 +59,9 @@
                 Come join us in Swansea at The Penyrheol Theatre on Saturday 30th September - We can't wait to see you there! 
             </p>
         </div>
-        <div class="col-md-5 col-md-offset-2">
-            <div class="panel">
-                <img src="images/caponeSwanseaNTM.png" class="panel-avatar">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="lpanel">
+                <img src="images/caponeSwanseaNTM.png" class="large-panel">
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-md-5 col-md-push-5">
+        <div class="col-sm-12 col-sm-push-12 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6">
             <h2 class="featurette-heading">Capone Clothing</h2>
             <p class="lead"> 
                 Capone Clothing boasts a range of comfortable and quality street wear, without the steep price tag            
@@ -84,9 +84,9 @@
                 <text style="font-size: 22px; font-weight:700;"> #CAPONECLOTHING</text>
             </p>
         </div>
-        <div class="col-md-5 col-md-pull-5">
-            <div class="panel">
-                <img src="images/caponeHome.png" class="panel-avatar">
+        <div class="col-sm-12 col-sm-pull-12 col-md-6 col-md-pull-6 col-lg-6 col-lg-pull-6">
+            <div class="lpanel">
+                <img src="images/caponeHome.png" class="large-panel">
             </div>
         </div>
     </div>
@@ -101,17 +101,17 @@
     -->
 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <figure class="profile">
                 <img src="images/caponeHome2.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
-        <div class="col-xs-12 col-sm-12 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <figure class="profile">
                 <img src="images/caponeSwanseaNTM.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
-        <div class="col-xs-12 col-sm-12 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <figure class="profile">
                 <img src="images/caponeHome.png" class="profile-avatar" alt="profile-avatar">
             </figure>

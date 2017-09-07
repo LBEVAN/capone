@@ -39,6 +39,23 @@
     border-radius: 15%;
 }
 
+.lpanel {
+    text-align: -webkit-center;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #fff;
+}
+
+.large-panel {
+    text-align: -webkit-center;
+    display: block;
+    width: 80%;
+    height: 80%;
+    border-radius: 15%;
+}
+
 img[alt="profile-avatar"] {
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);

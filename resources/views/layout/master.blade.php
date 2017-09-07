@@ -21,7 +21,7 @@
         
         @include('component.nav')
 
-        <div class="container" style="min-height: 100%; margin-bottom: -110px; padding-top: 50px; padding-bottom:35px;">
+        <div class="container" style="min-height: 100%; margin-bottom: -75px; padding-top: 50px; padding-bottom:25px;">
             @yield('content')
 
             <div class="push"></div>
