@@ -23,7 +23,7 @@ Route::get('contact', array('as' => 'contact', function() {
     return view('page/contact');
 }));
 
-Route::get('about', array('as' => 'about', function() {
-    return view('page/about');
+Route::get('socials', array('as' => 'socials', function() {
+    return view('page/socials');
 }));
 
