@@ -116,7 +116,7 @@
         <div class="col-xs-10 col-xs-offset-1 
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
-                                col-lg-4 col-lg-offset-0" style="padding-bottom: 20px;">
+                                col-lg-4 col-lg-offset-0">
             <figure class="profile">
                 <img src="images/caponeHome2.png" class="profile-avatar" alt="profile-avatar">
             </figure>
@@ -124,7 +124,7 @@
         <div class="col-xs-10 col-xs-offset-1  
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
-                                col-lg-4 col-lg-offset-0" style="padding-bottom: 20px;">
+                                col-lg-4 col-lg-offset-0">
             <figure class="profile">
                 <img src="images/caponeSwanseaNTM.png" class="profile-avatar" alt="profile-avatar">
             </figure>
@@ -132,7 +132,7 @@
         <div class="col-xs-10 col-xs-offset-1  
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
-                                col-lg-4 col-lg-offset-0" style="padding-bottom: 20px;">
+                                col-lg-4 col-lg-offset-0">
             <figure class="profile">
                 <img src="images/caponeHome.png" class="profile-avatar" alt="profile-avatar">
             </figure>
