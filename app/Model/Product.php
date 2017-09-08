@@ -12,6 +12,20 @@ class Product extends Model {
         return $this->hasMany('App\Model\ProductStock', 'productId');
     }
 
+    public function getProductVariant($sizeCode) {
+        $variants = $this->productStock;
+        $variantToReturn = null;
+        
+        foreach($variants as $variant) {
+            if($variant->size->code == $sizeCode) {
+                $variantToReturn = $variant;
+                break;
+            }
+        }
+
+        return $variantToReturn;
+    }
+
     /**
     * Get the route key for the model.
     *

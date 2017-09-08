@@ -6,7 +6,8 @@
 @stop
 
 @section('content')
-    <form method="POST">
+    <form method="POST" action="{{ route('store.addToCart', $product->id) }}">
+        {{ csrf_field() }}
         <div class="product-container">
             <div class="row">
 
@@ -30,7 +31,7 @@
                             </select>
                         </div>
                         <div class="col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
-                            <button class="btn btn-primary btn-block">Add to Basket</button>
+                            <button class="btn btn-primary btn-block" type="submit">Add to Cart</button>
                         </div>
                     </div>
                 </div>

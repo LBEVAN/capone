@@ -16,6 +16,15 @@
                     <li><a href="{{ route('socials') }}">Social Media</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="fa fa-shopping-cart fa-lg dropdown-toggle" id="cart" data-toggle="dropdown"></a>
+                            @component('component.cart', ['numToShow' => 5])@endcomponent
+                        </li>
+                    <!-- <li><a href="#">Test1</a></li> -->
+                    <!-- <li><a href="#">Test2</a></li>  -->
+                    <!-- use the following on an <li> tag for active screen: class="active" style="padding-right:15px;" -->
+                </ul>
             </div>
         </div>
     </nav>

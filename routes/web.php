@@ -15,8 +15,19 @@ Route::get('/', array('as' => '/', function() {
     return view('page/home');
 }));
 
+Route::post('store/addToCart/{product}', [
+    'as' => 'store.addToCart',
+    'uses' => 'StoreController@addToCart'
+]);
+
+Route::post('store/removeFromCart/{id}', [
+    'as' => 'store.removeFromCart',
+    'uses' => 'StoreController@removeFromCart'
+]);
+
 Route::resource('store', 'StoreController', ['only' => [
-    'index', 'show'
+    'index', 
+    'show'
 ]]);
 
 Route::get('contact', array('as' => 'contact', function() {
