@@ -13,7 +13,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('store.index') }}">Store</a></li>
-                    <li><a href="{{ route('socials') }}">Socail Media</a></li>
+                    <li><a href="{{ route('socials') }}">Social Media</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div>
