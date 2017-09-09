@@ -13,11 +13,11 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="product">
                     <a href="{{ route('store.show', $product) }}">
-                        <img src="images/items/babyPinkHoodie1.png">
+                        <img src="{{ '../' . $product->imagePath }}">
                     </a>
                     <div class="product-block">
                         <figure class="profile">
-                            <img src="images/items/babyPinkHoodie1.png" class="profile-avatar" alt="">
+                            <img src="{{ '../' . $product->imagePath }}" class="profile-avatar" alt="">
                         </figure>
 
                         <span class="product-title">{{ $product->name }}</span> 
