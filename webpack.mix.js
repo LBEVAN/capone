@@ -21,4 +21,5 @@ mix
     .sass('resources/assets/sass/socials.scss', 'public/css')
     .sass('resources/assets/sass/contact.scss', 'public/css')
     .sass('resources/assets/sass/store.scss', 'public/css')
-    .sass('resources/assets/sass/product.scss', 'public/css');
+    .sass('resources/assets/sass/product.scss', 'public/css')
+    .sass('resources/assets/sass/cart.scss', 'public/css');

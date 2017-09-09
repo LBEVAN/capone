@@ -6,8 +6,9 @@
 @stop
 
 @section('content')
-    <form method="POST" action="{{ route('store.addToCart', $product->id) }}">
+    <form method="POST" action="{{ route('cart.store') }}">
         {{ csrf_field() }}
+        <input type="hidden" id="productId"name=" productId" value="{{ $product->id }}" />
         <div class="product-container">
             <div class="row">
 
@@ -24,7 +25,7 @@
                     </div>
                     <div>
                         <div class="col-sm-12 col-md-5 col-lg-5" style="margin-bottom:20px;">
-                            <select id="size" name="size" class="form-control" required="required">
+                            <select id="sizeCode" name="sizeCode" class="form-control" required="required">
                                 @foreach($product->productStock as $productStock)
                                     <option value="{{ $productStock->size->code }}">{{ $productStock->size->description }}</option>
                                 @endforeach

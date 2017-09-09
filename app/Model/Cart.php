@@ -58,6 +58,15 @@ class Cart {
     }
 
     /**
+     * Remove all entries from the cart.
+     */
+    public function removeAll() {
+        $this->entries = null;
+        $this->totalQuantity = 0;
+        $this->totalPrice = 0;
+    }
+
+    /**
      * Generate a unique Id for a cart entry.
      *
      * @param int $id

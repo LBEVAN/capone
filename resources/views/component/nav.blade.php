@@ -14,7 +14,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="fa fa-shopping-cart fa-lg dropdown-toggle" id="cart" data-toggle="dropdown"></a>
-                    @component('component.cart', ['numToShow' => 5])@endcomponent
+                    <ul class="dropdown-menu cart-dropdown" aria-labelledby="cart">
+                        @component('component.cart', ['view' => 'partial', 'numToShow' => 5, 'isEditable' => false])@endcomponent
+                    </ul>
                 </li>
             </ul>
         </div>

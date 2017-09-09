@@ -15,15 +15,17 @@ Route::get('/', array('as' => '/', function() {
     return view('page/home');
 }));
 
-Route::post('store/addToCart/{product}', [
-    'as' => 'store.addToCart',
-    'uses' => 'StoreController@addToCart'
-]);
+    Route::delete('destroyAll', [
+        'as' => 'cart.destroyAll',
+        'uses' =>'CartController@destroyAll'
+    ]);
 
-Route::post('store/removeFromCart/{id}', [
-    'as' => 'store.removeFromCart',
-    'uses' => 'StoreController@removeFromCart'
-]);
+    Route::resource('cart', 'CartController', ['only' => [
+        'index',
+        'store',
+        'update',
+        'destroy'
+    ]]);
 
 Route::resource('store', 'StoreController', ['only' => [
     'index', 
