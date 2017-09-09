@@ -35,7 +35,6 @@ class CartEntry {
     }
 
     public function setQuantity($quantity) {
-        print_r($quantity);
         $this->quantity = $quantity;
     }
 

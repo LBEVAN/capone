@@ -67,6 +67,13 @@ class Cart {
     }
 
     /**
+     * Update the quantity of the specified cart entry.
+     */
+    public function updateQuantity($cartEntryId, $quantity) {
+        $this->entries[$cartEntryId]->setQuantity($quantity);
+    }
+
+    /**
      * Generate a unique Id for a cart entry.
      *
      * @param int $id

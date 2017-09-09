@@ -7,6 +7,6 @@
 
 @section('content')
     <div class="page-header">Cart</div>
-        @component('component.cart', ['view' => 'full', 'numToShow' => 0, 'isEditable' => true])@endcomponent
+        @component('component.cart', ['view' => 'full', 'numToShow' => 0])@endcomponent
     </div> 
 @stop

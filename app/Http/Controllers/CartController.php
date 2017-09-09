@@ -52,7 +52,13 @@ class CartController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        // TODO
+        // get data
+        $quantity = $request->get('quantity');
+
+        // update cart
+        $cart = Cart::getCart();
+        $cart->updateQuantity($id, $quantity);
+        Cart::updateCart($cart);
     }
 
     /**

@@ -1,3 +1,8 @@
+@section('head')
+    @parent
+    <script type="text/javascript" src="{{ asset('js/cart.js') }}"></script>
+@stop
+
 @if(Session::has('cart') && count(Session::get('cart')->getEntries()) > 0)
     <table class="table">
         <tr>
@@ -18,7 +23,13 @@
                     {{ method_field('DELETE') }}
                     <tr>
                         <td>{{ $cartEntry->getProduct()->name }} ({{ $cartEntry->getProductVariant()->size->description }})</td>
-                        <td>{{ $cartEntry->getQuantity() }}</td>
+    
+                        @if($view == 'full')
+                            <td>@component('component.quantity-dropdown', ['currentQuantity' => $cartEntry->getQuantity(), 'cartEntryId' =>  $cartEntry->getId() ])@endcomponent</td>
+                        @else
+                            <td>{{ $cartEntry->getQuantity() }}</td>
+                        @endif
+
                         <td>£{{ $cartEntry->getPrice() }}</td>
 
                         @if($view == 'full')
