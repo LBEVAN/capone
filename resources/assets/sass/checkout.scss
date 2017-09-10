@@ -1,0 +1,12 @@
+@import '_variables';
+
+.subtotals {
+    border-top: solid 1px $border-color;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.totals {
+    border-top: solid 1px $border-color;
+    padding-top: 10px;
+} 

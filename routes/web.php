@@ -15,17 +15,17 @@ Route::get('/', array('as' => '/', function() {
     return view('page/home');
 }));
 
-    Route::delete('destroyAll', [
-        'as' => 'cart.destroyAll',
-        'uses' =>'CartController@destroyAll'
-    ]);
+Route::delete('destroyAll', [
+    'as' => 'cart.destroyAll',
+    'uses' =>'CartController@destroyAll'
+]);
 
-    Route::resource('cart', 'CartController', ['only' => [
-        'index',
-        'store',
-        'update',
-        'destroy'
-    ]]);
+Route::resource('cart', 'CartController', ['only' => [
+    'index',
+    'store',
+    'update',
+    'destroy'
+]]);
 
 Route::resource('store', 'StoreController', ['only' => [
     'index', 
@@ -39,4 +39,10 @@ Route::get('contact', array('as' => 'contact', function() {
 Route::get('socials', array('as' => 'socials', function() {
     return view('page/socials');
 }));
+
+Route::prefix('checkout')->group(function () {
+    Route::get('customer-information', function () {
+        return view('checkout/customer-information');
+    });
+});
 
