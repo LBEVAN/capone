@@ -41,7 +41,7 @@ class CartController extends Controller {
         Cart::updateCart($cart);
 
         // redirect
-        return redirect()->back();
+        return redirect()->back()->with('success', $product->name . ' successfully added to your cart.');
     }
 
     /**
