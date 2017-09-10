@@ -23,7 +23,6 @@
         @include('component.nav')
 
         <div class="container content-container">
-            @include('component.messages')
 
             @yield('content')
 

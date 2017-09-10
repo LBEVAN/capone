@@ -6,6 +6,9 @@
 @stop
 
 @section('content')
+
+    @include('component.messages')
+
     <form method="POST" action="{{ route('cart.store') }}">
         {{ csrf_field() }}
         <input type="hidden" id="productId"name=" productId" value="{{ $product->id }}" />
