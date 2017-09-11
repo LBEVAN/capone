@@ -1,5 +1,6 @@
 $(document).on('change', '#quantity', function (e) {
-    var cartEntryId = $("#cartEntryId").val();
+    var cartEntryId = $(this).parent().find('input').val();
+    var quantity = $(this).find('option:selected').val();
 
     $.ajaxSetup({
         headers: {
@@ -10,7 +11,10 @@ $(document).on('change', '#quantity', function (e) {
     $.ajax({
         type: 'PATCH',
         url : '/cart/' + cartEntryId,
-        data : {quantity : $('#quantity').val()},
+        data : { 'quantity' : quantity },
+        success: function(data) {
+            location.reload();
+        }
     });
     return false;
 });

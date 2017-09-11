@@ -70,7 +70,37 @@ class Cart {
      * Update the quantity of the specified cart entry.
      */
     public function updateQuantity($cartEntryId, $quantity) {
-        $this->entries[$cartEntryId]->setQuantity($quantity);
+        $entry = $this->entries[$cartEntryId];
+
+        // update cart entry details
+        $entry->setQuantity($quantity);
+        $entry->setPrice($entry->getProduct()->price * $quantity);
+
+        $this->entries[$cartEntryId] = $entry;
+
+        // update cart details
+        $this->totalQuantity = $this->calculateTotalQuantity();
+        $this->totalPrice = $this->calculateTotalPrice();
+    }
+
+    private function calculateTotalPrice() {
+        $calculatedPrice = 0;
+        
+        foreach($this->entries as $entry) {
+            $calculatedPrice += $entry->getPrice();
+        }
+
+        return $calculatedPrice;
+    }
+
+    private function calculateTotalQuantity() {
+        $calculatedQuantity = 0;
+        
+        foreach($this->entries as $entry) {
+            $calculatedQuantity += $entry->getQuantity();
+        }
+
+        return $calculatedQuantity;
     }
 
     /**
