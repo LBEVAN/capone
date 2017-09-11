@@ -11,7 +11,8 @@
 
     <div class="row">
         <div class="col-md-12">
-            <form>
+            <form action"{{ url('contact') }}" method="POST">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-md-6 .col-md-4">
                         <div class="form-group">

@@ -18,6 +18,7 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
+
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -29,7 +30,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 2525),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'caponeclothing@yahoo.com'),
+        'name' => env('MAIL_FROM_NAME', 'Capone Clothing'),
     ],
 
     /*
@@ -84,9 +85,10 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('fe331578559c2c'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('def9492ead27b6'),
+
 
     /*
     |--------------------------------------------------------------------------
