@@ -14,7 +14,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="fa fa-shopping-cart fa-lg dropdown-toggle clickable" id="cart" data-toggle="dropdown">
-                        <span>{{ Session::get('cart')->getTotalQuantity() }}</span>
+                        @if(Session::has('cart'))
+                            <span>{{ Session::get('cart')->getTotalQuantity() }}</span>
+                        @else
+                            <span>0</span>
+                        @endif
                     </a>
                     <ul class="dropdown-menu cart-dropdown" aria-labelledby="cart">
                         @component('component.cart', ['view' => 'partial', 'numToShow' => 5])@endcomponent
