@@ -13,11 +13,12 @@
         <div style="float: right; margin-left: 5px; margin-right: 5px;">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="fa fa-shopping-cart fa-lg dropdown-toggle clickable" id="cart" data-toggle="dropdown">
+                    <a class="fa fa-shopping-bag fa-lg dropdown-toggle clickable" id="cart" data-toggle="dropdown">
+                        
                         @if(Session::has('cart'))
-                            <span>{{ Session::get('cart')->getTotalQuantity() }}</span>
+                            <span class="basket-count">{{ Session::get('cart')->getTotalQuantity() }}</span>
                         @else
-                            <span>0</span>
+                            <span class="basket-count">0</span>
                         @endif
                     </a>
                     <ul class="dropdown-menu cart-dropdown" aria-labelledby="cart">
