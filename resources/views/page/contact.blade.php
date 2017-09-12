@@ -7,11 +7,11 @@
 
 @section('content')
 <div class="content-fluid">
-    <div class="page-header">Contact Us</div>
+    <div class="page-header">CONTACT US</div>
 
     <div class="row">
         <div class="col-md-12">
-            <form action"{{ url('contact') }}" method="POST">
+            <form method="POST" action="{{ route('abc') }}">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-md-6 .col-md-4">
@@ -19,7 +19,7 @@
                             <label for="name">
                                 Name
                             </label>
-                            <input type="text" class="form-control" id="name" placeholder="Please enter your name" required="required"/>
+                            <input type="text" class="form-control" id="name" name"name" placeholder="Please enter your name" required="required"/>
                         </div>
                     </div>
                     
@@ -29,7 +29,7 @@
                                 Email Address
                             </label>
                             
-                            <input type="email" class="form-control" id="email" placeholder="Please enter your email" required="required"/>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
                             </label>
                             <select id="subject" name="subject" class="form-control" required="required">
                                 <option value="na" selected="">--- Please select an option ---</option>
-                                <option value="service">General Enquires</option>
-                                <option value="product">Product Information</option>
-                                <option value="suggestions">Complaint</option>
+                                <option value="General Enquiry">General Enquires</option>
+                                <option value="Product Information">Product Information</option>
+                                <option value="** COMPLAINT **">Complaint</option>
                             </select>
                         </div>
                     </div>

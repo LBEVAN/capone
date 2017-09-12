@@ -8,13 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('/') }}">Capone Clothing</a>
+            <a class="navbar-brand" href="{{ route('/') }}">CAPONE CLOTHING</a>
         </div>
         <div style="float: right; margin-left: 5px; margin-right: 5px;">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="fa fa-shopping-bag fa-lg dropdown-toggle clickable" id="cart" data-toggle="dropdown">
-                        
+                    <a class="fa fa-shopping-basket fa-lg dropdown-toggle clickable" id="cart" data-toggle="dropdown">
                         @if(Session::has('cart'))
                             <span class="basket-count">{{ Session::get('cart')->getTotalQuantity() }}</span>
                         @else
@@ -29,9 +28,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-left">
             <ul class="nav navbar-nav">
-                <li><a href="{{ route('store.index') }}">Store</a></li>
-                <li><a href="{{ route('socials') }}">Social Media</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a href="{{ route('store.index') }}">STORE</a></li>
+                <li><a href="{{ route('socials') }}">SOCIAL MEDIA</a></li>
+                <li><a href="{{ route('contact') }}">CONTACT</a></li>
             </ul>
         </div>
     </div>

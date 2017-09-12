@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-    <div class="page-header">Products</div>
+    <div class="page-header">PRODUCTS</div>
 
     @include('component.messages')
 

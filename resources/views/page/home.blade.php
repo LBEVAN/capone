@@ -6,10 +6,6 @@
 @stop
 
 @section('content')
-    <div class="home-header">        
-        <div class="home-header-heavy">CAPONE</div>
-        <div class="home-header-light">CLOTHING</div>
-    </div>
 
     <!-- Carousel Starts -->
     <div class="row" style="margin-top: 30px;">
@@ -44,12 +40,17 @@
 
     <hr class="featurette-divider">
 
+    <div class="home-header">        
+        <div class="home-header-heavy">CAPONE</div>
+        <div class="home-header-light">CLOTHING</div>
+    </div>
+
     <div class="row featurette">
-        <div class="col-xs-10 col-xs-offset-1 
-                        col-sm-6 col-sm-offset-0 
-                            col-md-6 col-md-offset-0 
-                                col-lg-6 col-lg-offset-0">
-            <h2 class="featurette-heading">Swansea's Next Fitness Model</h2>
+        <div class="col-xs-10 col-xs-offset-1
+                        col-sm-8 col-sm-offset-0 
+                            col-md-8 col-md-offset-0 
+                                col-lg-8 col-lg-offset-0">
+            <h2 class="featurette-heading">SWANSEA'S NEXT FITNESS MODEL</h2>
             <p class="lead">
                 This year we will be sponsoring the Swansea Next Fitness Model.
                 We'll be giving prizes to 1st, 2nd and 3rd places and there will also be a stall set up on the day.
@@ -62,10 +63,10 @@
                 Come join us in Swansea at The Penyrheol Theatre on Saturday 30th September - We can't wait to see you there! 
             </p>
         </div>
-        <div class="col-xs-10 col-xs-offset-1 
-                        col-sm-6 col-sm-offset-0 
-                            col-md-6 col-md-offset-0 
-                                col-lg-6 col-lg-offset-0">
+        <div class="col-xs-8 col-xs-offset-2 
+                        col-sm-4 col-sm-offset-0
+                            col-md-4 col-md-offset-0
+                                col-lg-4 col-lg-offset-0">
             <div class="lpanel">
                 <img src="images/caponeSwanseaNTM.png" class="large-panel">
             </div>
@@ -75,11 +76,11 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-xs-10 col-xs-offset-1
-                        col-sm-6 col-sm-offset-0 col-sm-push-6 
-                            col-md-6 col-md-offset-0 col-md-push-6 
-                                col-lg-6 col-lg-offset-0 col-lg-push-6">
-            <h2 class="featurette-heading">Capone Clothing</h2>
+        <div class="col-xs-10 col-xs-push-1 
+                        col-sm-8 col-sm-push-4 
+                            col-md-8 col-md-push-4
+                                col-lg-8 col-lg-push-4">
+            <h2 class="featurette-heading">CAPONE CLOTHING</h2>
             <p class="lead"> 
                 Capone Clothing boasts a range of comfortable and quality street wear, without the steep price tag            
             </p>
@@ -93,10 +94,10 @@
                 <text style="font-size: 22px; font-weight:700;"> #CAPONECLOTHING</text>
             </p>
         </div>
-        <div class="col-xs-10 col-xs-offset-1 
-                        col-sm-6 col-sm-offset-0 col-sm-pull-6 
-                            col-md-6 col-md-offset-0 col-md-pull-6 
-                                col-lg-6 col-lg-offset-0 col-lg-pull-6">
+        <div class="col-xs-8 col-xs-offset-2
+                        col-sm-4 col-sm-offset-0 col-sm-pull-8 
+                            col-md-4 col-md-offset-0 col-md-pull-8
+                                col-lg-4 col-lg-offset-0 col-lg-pull-8">
             <div class="lpanel">
                 <img src="images/caponeHome.png" class="large-panel">
             </div>
@@ -113,7 +114,8 @@
     -->
 
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 
+        <h2 style="margin-top:0px; margin-bottom: 15px; text-align: center;">FEATURED ITEMS</h2>
+        <div class="col-xs-6 col-xs-offset-3 
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
@@ -121,7 +123,7 @@
                 <img src="images/caponeHome2.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
-        <div class="col-xs-10 col-xs-offset-1  
+        <div class="col-xs-6  
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
@@ -129,7 +131,7 @@
                 <img src="images/caponeSwanseaNTM.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
-        <div class="col-xs-10 col-xs-offset-1  
+        <div class="col-xs-6  
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">

@@ -32,11 +32,11 @@ Route::resource('store', 'StoreController', ['only' => [
     'show'
 ]]);
 
+Route::post('abc', array('as' => 'abc', 'uses' => 'ContactController@postContact'));
+
 Route::get('contact', array('as' => 'contact', function() {
     return view('page/contact');
 }));
-
-Route::post('contact', 'ContactController@postContact');
 
 Route::get('socials', array('as' => 'socials', function() {
     return view('page/socials');

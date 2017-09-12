@@ -1,7 +1,15 @@
-<h3> You've received a message through the Capone Clothing contact form</h3>
+@extends('emails.master')
 
-<p> You were contacted by $name using the email address: $email </p>
+@section('content')
 
-<div> 
-    <p> Their message: $contactMessage <p>
-</div>
+    <div class="row" style="margin-top: 30px;">
+        <h3 style="text-align: center;"> You've received a message through the Capone Clothing contact form</h3>
+
+        <div>
+            <p> Name: {{ $name }} </p>
+            <p> Email Address: {{ $email }} </p>
+            <p> Message: {{ $contactMessage }} <p>
+        </div>
+    </div>
+
+@stop

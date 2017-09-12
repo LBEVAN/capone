@@ -7,7 +7,7 @@
     <table class="table">
         <tr>
             <th>Product</th>
-            <th>Quantity</th>
+            <th style="min-width: 70px;">Quantity</th>
             <th>Price</th>
             <th><!-- empty to force a full width divider --></th>
         </tr>
@@ -42,7 +42,6 @@
     </table>
 
     <div class="cart-{{ $view }}-totals">
-        Total Quantity: {{ Session::get('cart')->getTotalQuantity() }}
         Total Price: £{{ Session::get('cart')->getTotalPrice() }}
     </div>
     
@@ -62,5 +61,7 @@
         <a class="btn btn-success btn-block" href="">Checkout</a>
     </div>
 @else
-    Your cart is empty
+    <div class="cart-{{ $view }}-actions">
+        Your cart is empty
+    </div>
 @endif
