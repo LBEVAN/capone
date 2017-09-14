@@ -42,9 +42,13 @@ Route::get('socials', array('as' => 'socials', function() {
     return view('page/socials');
 }));
 
-Route::prefix('checkout')->group(function () {
-    Route::get('customer-information', function () {
-        return view('checkout/customer-information');
-    });
+Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function() {
+
+    Route::get('/', array('as' => 'customer', 'uses' => 'CheckoutController@gotoCustomerInformation'));
+
+    Route::get('customer', array('as' => 'customer', 'uses' => 'CheckoutController@gotoCustomerInformation'));
+    Route::post('completeCustomer', array('as' => 'completeCustomer', 'uses' => 'CheckoutController@completeCustomerInformation'));
+
+    Route::get('shipping', array('as' => 'shipping', 'uses' => 'CheckoutController@gotoShipping'));
 });
 

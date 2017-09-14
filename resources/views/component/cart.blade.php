@@ -58,7 +58,7 @@
             <a class="btn btn-primary btn-block" href="{{ route('cart.index') }}">View All</a>
         @endif
 
-        <a class="btn btn-success btn-block" href="">Checkout</a>
+        <a class="btn btn-success btn-block" href="{{ route('checkout.customer') }}">Checkout</a>
     </div>
 @else
     <div class="cart-{{ $view }}-actions">
