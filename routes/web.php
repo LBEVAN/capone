@@ -50,5 +50,12 @@ Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function() {
     Route::post('completeCustomer', array('as' => 'completeCustomer', 'uses' => 'CheckoutController@completeCustomerInformation'));
 
     Route::get('shipping', array('as' => 'shipping', 'uses' => 'CheckoutController@gotoShipping'));
+    Route::post('completeShipping', array('as' => 'completeShipping', 'uses' => 'CheckoutController@completeShipping'));
+
+    Route::get('payment', array('as' => 'payment', 'uses' => 'CheckoutController@gotoPayment'));
+    Route::post('completePayment', array('as' => 'completePayment', 'uses' => 'CheckoutController@completePayment'));
+
+    Route::get('review', array('as' => 'review', 'uses' => 'CheckoutController@gotoReviewOrder'));
+    Route::get('completeOrder', array('as' => 'completeOrder', 'uses' => 'CheckoutController@completeOrder'));
 });
 

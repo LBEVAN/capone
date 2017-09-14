@@ -1,15 +1,22 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: LBEVAN
- * Date: 13/09/2017
- * Time: 16:55
- */
 
 namespace App\Repository;
 
 
-class IReferenceDataRepository
-{
+use App\ShippingOption;
+
+interface IReferenceDataRepository {
+
+    public function getCountries();
+
+    public function getCountryById($id);
+
+    public function getShippingOptions();
+
+    public function getShippingOptionById($id);
+
+    public function getPaymentOptions();
+
+    public function getPaymentOptionById($id);
 
 }
