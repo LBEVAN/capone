@@ -6,19 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model {
 
-    protected $table = 'order';
-    protected $fillable = ['orderCustomerInformation', 'shippingOption', 'paymentOption'];
+    protected $table = 'orders';
+    protected $fillable = ['firstName', 'lastName', 'email', 'address', 'city', 'country', 'postcode', 'shippingOption', 'paymentOption'];
 
-    public function customerInformation() {
-        return $this->hasOne('App\Model\CustomerInformation');
+    public function country() {
+        return $this->belongsTo('App\Model\country', 'countryId', 'id');
     }
 
     public function shippingOption() {
-        return $this->belongsTo('App\Model\shippingOption', 'shippingOptionId');
+        return $this->belongsTo('App\Model\shippingOption', 'shippingOptionId', 'id');
     }
 
     public function paymentOption() {
-        return $this->belongsTo('App\Model\paymentOption', 'paymentOptionId');
+        return $this->belongsTo('App\Model\paymentOption', 'paymentOptionId', 'id');
     }
 
     public function getTotal() {

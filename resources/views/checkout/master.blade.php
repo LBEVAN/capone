@@ -45,7 +45,7 @@
                     <div class="col-md-12 .col-md-8">
                         <div class="total">
                             <label>Shipping</label>
-                            @if(session('order')->shippingOption)
+                            @if(session('order') && session('order')->shippingOption)
                                 <label>£{{ session('order')->shippingOption->price }}</label>
                             @else
                                 <label>--</label>
@@ -69,7 +69,12 @@
                     <div class="col-md-12 .col-md-8">
                         <div class="total">
                             <label>Total</label>
-                            <label>£{{ session('order')->getTotal() }}</label>
+                            @if(session('order'))
+                                <label>£{{ session('order')->getTotal() }}</label>
+                            @else
+                                <label>--</label>
+                            @endif
+
                         </div>
                     </div>
                 </div>

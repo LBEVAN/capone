@@ -7,42 +7,42 @@
         <form method="GET" action="{{ route('checkout.completeOrder') }}">
 
             <h3>Customer Information</h3>
-            @php $orderCustomerInformation = session('order')->orderCustomerInformation @endphp
+            @php $order = session('order') @endphp
 
             <div class="row">
                 <div class="col-md-6 .col-md-4">
-                    <p><strong>First name: </strong>{{ $orderCustomerInformation->firstName }}</p>
+                    <p><strong>First name: </strong>{{ $order->firstName }}</p>
                 </div>
                 <div class="col-md-6 .col-md-4">
-                    <p><strong>Last name: </strong>{{ $orderCustomerInformation->lastName }}</p>
+                    <p><strong>Last name: </strong>{{ $order->lastName }}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 .col-md-8">
-                    <p><strong>Email: </strong>{{ $orderCustomerInformation->email }}</p>
+                    <p><strong>Email: </strong>{{ $order->email }}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 .col-md-8">
-                    <p><strong>Address: </strong>{{ $orderCustomerInformation->address }}</p>
+                    <p><strong>Address: </strong>{{ $order->address }}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 .col-md-8">
-                    <p><strong>City: </strong>{{ $orderCustomerInformation->city }}</p>
+                    <p><strong>City: </strong>{{ $order->city }}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 .col-md-4">
-                    <p><strong>Country: </strong>{{ $orderCustomerInformation->country->description }}</p>
+                    <p><strong>Country: </strong>{{ $order->country->description }}</p>
                 </div>
                 <div class="col-md-6 .col-md-4">
-                    <p><strong>Postcode: </strong>{{ $orderCustomerInformation->postcode }}</p>
+                    <p><strong>Postcode: </strong>{{ $order->postcode }}</p>
                 </div>
             </div>
 
             <h3>Shipping Information</h3>
-            @php $shippingOption = session('order')->shippingOption @endphp
+            @php $shippingOption = $order->shippingOption @endphp
 
             <div class="row">
                 <div class="col-md-12 .col-md-8">

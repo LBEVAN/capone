@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderCustomerInformationTable extends Migration {
+class CreateOrdersTable extends Migration {
     
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateOrderCustomerInformationTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('orderCustomerInformation', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('firstName');
             $table->string('lastName');
@@ -21,9 +21,13 @@ class CreateOrderCustomerInformationTable extends Migration {
             $table->string('city');
             $table->integer('countryId')->unsigned();
             $table->string('postcode');
+            $table->integer('shippingOptionId')->unsigned();
+            $table->integer('paymentOptionId')->unsigned();
             $table->timestamps();
 
             $table->foreign('countryId')->references('id')->on('country');
+            $table->foreign('shippingOptionId')->references('id')->on('shippingOption');
+            $table->foreign('paymentOptionId')->references('id')->on('paymentOption');
         });
     }
 
@@ -33,6 +37,6 @@ class CreateOrderCustomerInformationTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('orderCustomerInformation');
+        Schema::dropIfExists('orders');
     }
 }

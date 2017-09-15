@@ -11,6 +11,14 @@ use Validator;
 use App\Repository\IReferenceDataRepository;
 use App\Http\Requests\CheckoutCustomerInformation;
 use App\Model\Order;
+use PayPal\Api\Amount;
+use PayPal\Api\Details;
+use PayPal\Api\Item;
+use PayPal\Api\ItemList;
+use PayPal\Api\Payer;
+use PayPal\Api\Payment;
+use PayPal\Api\RedirectUrls;
+use PayPal\Api\Transaction;
 
 class CheckoutController extends Controller {
 
@@ -34,7 +42,7 @@ class CheckoutController extends Controller {
      * @return mixed
      */
     public function completeCustomerInformation(CheckoutCustomerInformation $request) {
-        $orderCustomerInformation = new OrderCustomerInformation(array(
+        $order = new Order(array(
             'firstName' => $request->get('firstName'),
             'lastName' => $request->get('lastName'),
             'email' => $request->get('email'),
@@ -43,8 +51,6 @@ class CheckoutController extends Controller {
             'country' => $this->referenceDataRepository->getCountryById($request->get('country')),
             'postcode' => $request->get('postcode'),
         ));
-
-        $order = new Order(array('orderCustomerInformation' => $orderCustomerInformation));
 
         session(['order' => $order]);
 
@@ -125,7 +131,7 @@ class CheckoutController extends Controller {
      * @return Response
      */
     public function completeOrder() {
-        // todo: paypal
-        return redirect('/');
+        // determine what method to use
+        return redirect('checkout/completeOrderWithPayPal');
     }
 }
