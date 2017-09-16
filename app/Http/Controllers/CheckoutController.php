@@ -32,6 +32,11 @@ class CheckoutController extends Controller {
      * @return Response
      */
     public function gotoCustomerInformation() {
+        // if an order is not in progress, create one
+        if(!session('order')) {
+            session(['order' => new Order()]);
+        }
+
         return View::make('checkout/customer');
     }
 
@@ -42,7 +47,9 @@ class CheckoutController extends Controller {
      * @return mixed
      */
     public function completeCustomerInformation(CheckoutCustomerInformation $request) {
-        $order = new Order(array(
+        $order = session('order');
+
+        $order->fill([
             'firstName' => $request->get('firstName'),
             'lastName' => $request->get('lastName'),
             'email' => $request->get('email'),
@@ -50,7 +57,7 @@ class CheckoutController extends Controller {
             'city' => $request->get('city'),
             'country' => $this->referenceDataRepository->getCountryById($request->get('country')),
             'postcode' => $request->get('postcode'),
-        ));
+        ]);
 
         session(['order' => $order]);
 
