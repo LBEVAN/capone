@@ -47,7 +47,7 @@ class ProductTableSeeder extends Seeder {
             'description' => '100% Ringspun Semi-Combed Cotton, Tapered Fit, Ribbed Collar, Twin Needle Stitching',
             'price' => 15.00,
             'categoryId' => 2,
-            'imagePath' => 'images/items/comingSoon.png',
+            'imagePath' => 'images/items/caponeBlackTee.png',
         ]);
 
         DB::table('product')->insert([
@@ -55,7 +55,7 @@ class ProductTableSeeder extends Seeder {
             'description' => '100% Ringspun Semi-Combed Cotton, Tapered Fit, Ribbed Collar, Twin Needle Stitching',
             'price' => 15.00,
             'categoryId' => 2,
-            'imagePath' => 'images/items/comingSoon.png',
+            'imagePath' => 'images/items/caponeWhiteTee.png',
         ]);
 
         DB::table('product')->insert([
@@ -88,6 +88,22 @@ class ProductTableSeeder extends Seeder {
             'price' => 20.00,
             'categoryId' => 2,
             'imagePath' => 'images/items/longLineRaglan2.png',
+        ]);
+
+        DB::table('product')->insert([
+            'name' => 'Classic Fitted Vest - White',
+            'description' => '60% cotton/40% polyester, Single jersey, Ribbed collar, Raw edged armholes and hem',
+            'price' => 15.00,
+            'categoryId' => 4,
+            'imagePath' => 'images/items/whiteClassicVest.png',
+        ]);
+
+        DB::table('product')->insert([
+            'name' => 'Classic Fitted Vest - Black',
+            'description' => '60% cotton/40% polyester, Single jersey, Ribbed collar, Raw edged armholes and hem',
+            'price' => 15.00,
+            'categoryId' => 4,
+            'imagePath' => 'images/items/comingSoon.png',
         ]);
     }
 }
