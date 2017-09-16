@@ -63,12 +63,14 @@
                 Come join us in Swansea at The Penyrheol Theatre on Saturday 30th September - We can't wait to see you there! 
             </p>
         </div>
-        <div class="col-xs-8 col-xs-offset-2 
+        <div class="col-xs-10 col-xs-offset-1 
                         col-sm-4 col-sm-offset-0
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
             <div class="lpanel">
-                <img src="images/caponeSwanseaNTM.png" class="large-panel">
+                <a href="http://www.nextfitnessmodeluk.com/">
+                    <img src="images/caponeSwanseaNTM.png" class="large-panel"> 
+                </a>
             </div>
         </div>
     </div>
@@ -94,12 +96,12 @@
                 <text style="font-size: 22px; font-weight:700;"> #CAPONECLOTHING</text>
             </p>
         </div>
-        <div class="col-xs-8 col-xs-offset-2
+        <div class="col-xs-10 col-xs-offset-1
                         col-sm-4 col-sm-offset-0 col-sm-pull-8 
                             col-md-4 col-md-offset-0 col-md-pull-8
                                 col-lg-4 col-lg-offset-0 col-lg-pull-8">
             <div class="lpanel">
-                <img src="images/caponeHome.png" class="large-panel">
+                <img src="images/Home1.png" class="large-panel">
             </div>
         </div>
     </div>
@@ -115,7 +117,15 @@
 
     <div class="row">
         <h2 style="margin-top:0px; margin-bottom: 15px; text-align: center;">FEATURED ITEMS</h2>
-        <div class="col-xs-6 col-xs-offset-3 
+        <div class="col-xs-10 col-xs-offset-1
+                        col-sm-4 col-sm-offset-0 
+                            col-md-4 col-md-offset-0
+                                col-lg-4 col-lg-offset-0">
+            <figure class="profile">
+                <img src="images/caponeHome1.png" class="profile-avatar" alt="profile-avatar">
+            </figure>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1  
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
@@ -123,20 +133,12 @@
                 <img src="images/caponeHome2.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
-        <div class="col-xs-6  
+        <div class="col-xs-10 col-xs-offset-1 
                         col-sm-4 col-sm-offset-0 
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
             <figure class="profile">
-                <img src="images/caponeSwanseaNTM.png" class="profile-avatar" alt="profile-avatar">
-            </figure>
-        </div>
-        <div class="col-xs-6  
-                        col-sm-4 col-sm-offset-0 
-                            col-md-4 col-md-offset-0
-                                col-lg-4 col-lg-offset-0">
-            <figure class="profile">
-                <img src="images/caponeHome.png" class="profile-avatar" alt="profile-avatar">
+                <img src="images/caponeHome3.png" class="profile-avatar" alt="profile-avatar">
             </figure>
         </div>
     </div>
