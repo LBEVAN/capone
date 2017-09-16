@@ -1,5 +1,11 @@
 @import '_variables';
 
+.discount {
+  border-top: solid 1px $border-color;
+  padding: 25px 0 10px 0;
+  margin: 0;
+}
+
 .subtotals {
     border-top: solid 1px $border-color;
     padding: 10px 0 10px 0;

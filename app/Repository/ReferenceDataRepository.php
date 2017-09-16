@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Model\Discount;
 use App\Model\PaymentOption;
 use App\Model\ShippingOption;
 use App\Model\Country;
@@ -31,5 +32,9 @@ class ReferenceDataRepository implements IReferenceDataRepository {
 
     public function getPaymentOptionById($id) {
         return PaymentOption::find($id);
+    }
+
+    public function getDiscountByCode($code) {
+        return Discount::where('discountCode', $code)->first();
     }
 }

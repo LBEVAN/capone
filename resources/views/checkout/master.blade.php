@@ -31,6 +31,24 @@
                 @endforeach
             </table>
 
+            <form method="POST" action="{{ route('checkout.applyDiscount') }}">
+                {{ csrf_field() }}
+                <div class="row discount">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="discount" name="discount" maxlength="20" placeholder="Please enter a discount code" required />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-block pull-right" id="btnApplyDiscount">
+                                Apply discount
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
             <div class="row subtotals">
                 <div class="row">
                     <div class="col-md-12 .col-md-8">
@@ -44,9 +62,9 @@
                 <div class="row">
                     <div class="col-md-12 .col-md-8">
                         <div class="total">
-                            <label>Shipping</label>
-                            @if(session('order') && session('order')->shippingOption)
-                                <label>£{{ session('order')->shippingOption->price }}</label>
+                            <label>Discount</label>
+                            @if(session('order') && session('order')->discount)
+                                <label>{{ number_format(session('order')->discount->discountPercentage, 0) }}%</label>
                             @else
                                 <label>--</label>
                             @endif
@@ -57,8 +75,12 @@
                 <div class="row">
                     <div class="col-md-12 .col-md-8">
                         <div class="total">
-                            <label>Discount</label>
-                            <label>TODO (ONLY SHOW IF ENTERED)</label>
+                            <label>Shipping</label>
+                            @if(session('order') && session('order')->shippingOption)
+                                <label>£{{ session('order')->shippingOption->price }}</label>
+                            @else
+                                <label>--</label>
+                            @endif
                         </div>
                     </div>
                 </div>

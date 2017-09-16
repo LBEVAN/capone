@@ -60,5 +60,7 @@ Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function() {
 
     Route::get('completeOrderWithPayPal', array('as' => 'completeWithPayPal', 'uses' => 'CheckoutPayPalController@completeOrder'));
     Route::get('resolvePaymentStatus', array('as' => 'resolvePaymentStatus', 'uses' => 'CheckoutPayPalController@resolvePaymentStatus'));
+
+    Route::post('applyDiscount', array('as' => 'applyDiscount', 'uses' => 'CheckoutController@applyDiscount'));
 });
 

@@ -23,11 +23,13 @@ class CreateOrdersTable extends Migration {
             $table->string('postcode');
             $table->integer('shippingOptionId')->unsigned();
             $table->integer('paymentOptionId')->unsigned();
+            $table->integer('discountId')->unsigned();
             $table->timestamps();
 
             $table->foreign('countryId')->references('id')->on('country');
             $table->foreign('shippingOptionId')->references('id')->on('shippingOption');
             $table->foreign('paymentOptionId')->references('id')->on('paymentOption');
+            $table->foreign('discountId')->references('id')->on('discount');
         });
     }
 

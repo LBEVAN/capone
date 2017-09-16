@@ -19,4 +19,6 @@ interface IReferenceDataRepository {
 
     public function getPaymentOptionById($id);
 
+    public function getDiscountByCode($code);
+
 }

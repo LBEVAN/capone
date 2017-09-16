@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\IOrderRepository;
 use Illuminate\Support\Facades\Log;
 use PayPal\Api\Amount;
 use PayPal\Api\Details;
@@ -23,9 +22,7 @@ class CheckoutPayPalController extends Controller {
 
     private $apiContext;
 
-    public function __construct(IOrderRepository $orderRepository) {
-        $this->orderRepository = $orderRepository;
-
+    public function __construct() {
         // setup the PayPal api context
         $config = \Config::get('paypal');
         $this->apiContext = new ApiContext(new OAuthTokenCredential($config['client_id'], $config['secret']));
@@ -51,12 +48,27 @@ class CheckoutPayPalController extends Controller {
             array_push($items, $item);
         }
 
+        $discountAmount = 0;
+        if(session('order')->discount) {
+            $discountAmount = session('cart')->getTotalPrice() / 100 * session('order')->discount->discountPercentage;
+        }
+
+        if(session('order')->discount) {
+            $item = new Item();
+            $item->setName('Discount');
+            $item->setCurrency('GBP');
+            $item->setQuantity(1);
+            $item->setPrice(-$discountAmount);
+
+            array_push($items, $item);
+        }
+
         $itemList = new ItemList();
         $itemList->setItems($items);
 
         $details = new Details();
         $details->setShipping(session('order')->shippingOption->price)
-            ->setSubtotal(session('cart')->getTotalPrice());
+            ->setSubtotal(session('cart')->getTotalPrice() - $discountAmount);
 
         $amount = new Amount();
         $amount->setCurrency('GBP')
@@ -84,6 +96,7 @@ class CheckoutPayPalController extends Controller {
             Log::error('An error occurred establishing a connection to PayPal');
             Log::error('Code: ' . $ex->getCode());
             Log::error('Message: ' . $ex->getMessage());
+            Log::error('Data: ' . $ex->getData());
 
             return redirect()->back()->withErrors('An error occurred establishing a connection to PayPal. Please try again later.');
         }
@@ -105,7 +118,7 @@ class CheckoutPayPalController extends Controller {
         session()->forget('paymentId');
 
         if (empty(Input::get('PayerID')) || empty(Input::get('token'))) {
-            return redirect('checkout.review')->withErrors('Payment failed.');
+            return redirect('checkout/review')->withErrors('Payment failed.');
         }
 
         $payment = Payment::get($paymentId, $this->apiContext);
@@ -127,7 +140,7 @@ class CheckoutPayPalController extends Controller {
             return redirect('/')->with('success', 'Payment successful.');
         }
 
-        return redirect('checkout.review')->withErrors('Payment failed.');
+        return redirect('checkout/review')->withErrors('Payment failed.');
     }
 
     private function getApprovalUrl($payment) {

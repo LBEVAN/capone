@@ -134,4 +134,25 @@ class CheckoutController extends Controller {
         // determine what method to use
         return redirect('checkout/completeOrderWithPayPal');
     }
+
+    /**
+     * Complete the payment information step.
+     *
+     * @param Request $request
+     * @return mixed
+     */
+    public function applyDiscount(Request $request) {
+        Validator::make($request->all(), [
+            'discount' => 'required|exists:discount,discountCode',
+        ])->validate();
+
+        $order = session('order');
+        if(!isset($order)) {
+            $order = new Order();
+        }
+        $order->discount = $this->referenceDataRepository->getDiscountByCode($request->get('discount'));
+        session(['order' => $order]);
+
+        return redirect()->back()->with('success', 'Discount code \'' . $order->discount->discountCode . '\' successfully applied.');
+    }
 }
