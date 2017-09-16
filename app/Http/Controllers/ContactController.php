@@ -21,7 +21,7 @@ class ContactController extends Controller
         Mail::send('emails.contact', $contactData, function($message) use ($contactData){
             $message->subject($contactData['subject']);
             $message->to('caponeclothing@yahoo.com');
-            $message->from('ben.coleedwards@rocketmail.com');
+            $message->from($contactData['email']);
         });
 
         Session::flash('success', 'Your query has been received, we will try and reply as soon as possible.');

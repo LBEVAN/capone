@@ -18,11 +18,15 @@ use PayPal\Rest\ApiContext;
 use Illuminate\Support\Facades\Input;
 use URL;
 
+use Session;
+use Mail;
+
 class CheckoutPayPalController extends Controller {
 
     private $apiContext;
 
     public function __construct() {
+
         // setup the PayPal api context
         $config = \Config::get('paypal');
         $this->apiContext = new ApiContext(new OAuthTokenCredential($config['client_id'], $config['secret']));
@@ -133,6 +137,32 @@ class CheckoutPayPalController extends Controller {
         $result = $payment->execute($execution, $this->apiContext);
 
         if ($result->getState() == 'approved') {
+
+            $order = session('order');
+
+            $orderData = array(
+                'firstName' => $order->firstName,
+                'lastName' => $order->lastName,
+                'email' => $order->email,
+                'address' => $order->address,
+                'city' => $order->city,
+                'postcode' => $order->postcode,
+                'shipping' => $order->shippingOption->price,
+                'items' => session('cart')
+            );
+    
+            Mail::send('emails.confirmOrder', $orderData, function($message) use ($orderData){
+                $message->subject('Capone Clothing- Order Confirmation');
+                $message->to($orderData['email']);
+                $message->from('CaponeClothing@yahoo.com');
+            });
+
+            Mail::send('emails.confirmOrderInternal', $orderData, function($message) use ($orderData){
+                $message->subject('*** ORDER ALERT ***');
+                $message->to('CaponeClothing@yahoo.com');
+                $message->from($orderData['email']);
+            });
+
             // insert order details to database
             session()->forget('order');
             session()->forget('cart');

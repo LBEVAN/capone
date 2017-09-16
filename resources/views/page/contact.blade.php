@@ -43,6 +43,7 @@
                                 <option value="na" selected="">--- Please select an option ---</option>
                                 <option value="General Enquiry">General Enquires</option>
                                 <option value="Product Information">Product Information</option>
+                                <option value="Webiste bugs and improvements">Webiste - bugs and improvements</option>
                                 <option value="** COMPLAINT **">Complaint</option>
                             </select>
                         </div>
