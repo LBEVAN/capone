@@ -2,8 +2,8 @@
 
 return array(
     /** set your paypal credential **/
-    'client_id' =>'client_id',
-    'secret' => 'secret',
+    'client_id' => env('PAYPAL_CLIENT_ID'),
+    'secret' => env('PAYPAL_SECRET'),
     /**
      * SDK configuration
      */
