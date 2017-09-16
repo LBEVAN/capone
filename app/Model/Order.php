@@ -10,19 +10,19 @@ class Order extends Model {
     protected $fillable = ['firstName', 'lastName', 'email', 'address', 'city', 'country', 'postcode', 'shippingOption', 'paymentOption', 'discount'];
 
     public function country() {
-        return $this->belongsTo('App\Model\country', 'countryId', 'id');
+        return $this->belongsTo('App\Model\Country', 'countryId', 'id');
     }
 
     public function shippingOption() {
-        return $this->belongsTo('App\Model\shippingOption', 'shippingOptionId', 'id');
+        return $this->belongsTo('App\Model\ShippingOption', 'shippingOptionId', 'id');
     }
 
     public function paymentOption() {
-        return $this->belongsTo('App\Model\paymentOption', 'paymentOptionId', 'id');
+        return $this->belongsTo('App\Model\PaymentOption', 'paymentOptionId', 'id');
     }
 
     public function discount() {
-        return $this->belongsTo('App\Model\discount', 'discountId', 'id');
+        return $this->belongsTo('App\Model\Discount', 'discountId', 'id');
     }
 
     public function getTotal() {
