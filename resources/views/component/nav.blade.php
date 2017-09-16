@@ -27,10 +27,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-left">
             <ul class="nav navbar-nav">
-                <li><a style="font-size: 2.5rem;" href="{{ route('/') }}">Capone Clothing</a></li>
-                <li><a href="{{ route('store.index') }}">Store</a></li>
-                <!-- <li><a href="{{ route('socials') }}">SOCIAL MEDIA</a></li> -->
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a style="font-size: 2.5rem;" href="{{ route('/') }}">CAPONE CLOTHING</a></li>
+                <li><a href="{{ route('store.index') }}">STORE</a></li>
+                <li><a href="{{ route('contact') }}">CONTACT</a></li>
             </ul>
         </div>
     </div>
