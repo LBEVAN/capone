@@ -75,14 +75,6 @@ class ProductTableSeeder extends Seeder {
         ]);
 
         DB::table('product')->insert([
-            'name' => 'Joggers - Grey Camo',
-            'description' => '35% Cotton, 65% Polyester, Slim Fit, Camo Stripe On Each Leg',
-            'price' => 22.00,
-            'categoryId' => 3,
-            'imagePath' => 'images/items/greyCamoJoggers.png',
-        ]);
-
-        DB::table('product')->insert([
             'name' => 'Longline Raglan - Light Grey',
             'description' => '100% Cotton, Dual coloured short sleeves',
             'price' => 20.00,
