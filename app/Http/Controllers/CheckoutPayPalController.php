@@ -140,30 +140,20 @@ class CheckoutPayPalController extends Controller {
 
             $order = session('order');
 
-            $orderData = array(
-                'firstName' => $order->firstName,
-                'lastName' => $order->lastName,
-                'email' => $order->email,
-                'address' => $order->address,
-                'city' => $order->city,
-                'postcode' => $order->postcode,
-                'shipping' => $order->shippingOption->price,
-                'items' => session('cart')
-            );
-    
-            Mail::send('emails.confirmOrder', $orderData, function($message) use ($orderData){
-                $message->subject('Capone Clothing- Order Confirmation');
-                $message->to($orderData['email']);
-                $message->from('CaponeClothing@yahoo.com');
-            });
+            try {
+                $this->sendConfirmationEmails($order);
+            } catch(\Exception $ex) {
+                Log::error('Code: ' . $ex->getCode());
+                Log::error('Message: ' . $ex->getMessage());
 
-            Mail::send('emails.confirmOrderInternal', $orderData, function($message) use ($orderData){
-                $message->subject('*** ORDER ALERT ***');
-                $message->to('CaponeClothing@yahoo.com');
-                $message->from($orderData['email']);
-            });
+                session()->forget('order');
+                session()->forget('cart');
 
-            // insert order details to database
+                return redirect('/')->with('success', 'Payment successful.')->withErrors(
+                    'Payment successful, however an error occurred sending the order confirmation email. 
+                    Please contact us using the contact us form, or directly via caponeclothing@yahoo.com.');
+            }
+
             session()->forget('order');
             session()->forget('cart');
 
@@ -184,5 +174,30 @@ class CheckoutPayPalController extends Controller {
         }
 
         return $redirectUrl;
+    }
+
+    private function sendConfirmationEmails($order) {
+        $orderData = array(
+            'firstName' => $order->firstName,
+            'lastName' => $order->lastName,
+            'email' => $order->email,
+            'address' => $order->address,
+            'city' => $order->city,
+            'postcode' => $order->postcode,
+            'shipping' => $order->shippingOption->price,
+            'items' => session('cart')
+        );
+
+        Mail::send('emails.confirmOrder', $orderData, function($message) use ($orderData){
+            $message->subject('Capone Clothing - Order Confirmation');
+            $message->to($orderData['email']);
+            $message->from('caponeclothing@yahoo.com');
+        });
+
+        Mail::send('emails.confirmOrderInternal', $orderData, function($message) use ($orderData){
+            $message->subject('*** ORDER ALERT ***');
+            $message->to('caponeclothing@yahoo.com');
+            $message->from('caponeclothing@yahoo.com');
+        });
     }
 }

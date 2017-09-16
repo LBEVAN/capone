@@ -7,6 +7,8 @@
 
 @section('content')
 
+    @include('component.messages')
+
     <!-- Carousel Starts -->
     <div class="row" style="margin-top: 30px;">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
