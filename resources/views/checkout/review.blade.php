@@ -51,7 +51,7 @@
             </div>
 
             <h3>Payment Information</h3>
-            @php $paymentOption = session('order')->shippingOption @endphp
+            @php $paymentOption = session('order')->paymentOption @endphp
 
             <div class="row">
                 <div class="col-md-12 .col-md-8">
