@@ -9,6 +9,8 @@
 <div class="content-fluid">
     <div class="page-header">CONTACT US</div>
 
+    @include('component.messages')
+
     <div class="row">
         <div class="col-md-12">
             <form method="POST" action="{{ route('abc') }}">
@@ -19,7 +21,7 @@
                             <label for="name">
                                 Name
                             </label>
-                            <input type="text" class="form-control" id="name" name"name" placeholder="Please enter your name" required="required"/>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name" required="required"/>
                         </div>
                     </div>
                     
