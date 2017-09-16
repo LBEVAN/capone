@@ -27,6 +27,7 @@
                         @endforeach
                     </div>
                     <div>
+                        @if($product->isStockAvailable())
                         <div class="col-sm-12 col-md-5 col-lg-5" style="margin-bottom:20px;">
                             <select id="sizeCode" name="sizeCode" class="form-control" required="required">
                                 @foreach($product->productStock as $productStock)
@@ -37,6 +38,11 @@
                         <div class="col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
                             <button class="btn btn-primary btn-block" type="submit">Add to Cart</button>
                         </div>
+                        @else
+                            <div class="col-sm-12 col-md-5 col-lg-5">
+                                <span>Out of stock</span>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

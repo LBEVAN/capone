@@ -26,6 +26,18 @@ class Product extends Model {
         return $variantToReturn;
     }
 
+    public function isStockAvailable() {
+        $count = 0;
+
+        foreach($this->productStock as $productStock) {
+            if($productStock->quantity > 0) {
+                $count++;
+            }
+        }
+
+        return $count > 0;
+    }
+
     /**
     * Get the route key for the model.
     *

@@ -16,7 +16,11 @@
                 {{ csrf_field() }}
                 <input type="hidden" id="productId" name=" productId" value="{{ $product->id }}" />
                 <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                    <div class="product">
+                    @if($product->isStockAvailable())
+                        <div class="product">
+                    @else
+                        <div class="product out-of-stock">
+                    @endif
                         <a href="{{ route('store.show', $product) }}">
                             <img src="{{ '../' . $product->imagePath }}">
                         </a>
@@ -29,18 +33,24 @@
                             <span class="product-price">£{{ $product->price }}</span>
 
                             <div class="product-footer">
-                                <div class="product-footer-left">
-                                    <label for="sizeCode" style="padding-right: 5px;">Size:</label>
-                                    <select id="sizeCode" name="sizeCode" class="form-control" style="width: 60%;" required="required">
-                                        @foreach($product->productStock as $productStock)
-                                            <option value="{{ $productStock->size->code }}">{{ $productStock->size->description }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                @if($product->isStockAvailable())
+                                    <div class="product-footer-left">
+                                        <label for="sizeCode" style="padding-right: 5px;">Size:</label>
+                                        <select id="sizeCode" name="sizeCode" class="form-control" style="width: 60%;" required="required">
+                                            @foreach($product->productStock as $productStock)
+                                                <option value="{{ $productStock->size->code }}">{{ $productStock->size->description }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
 
-                                <div class="product-footer-right">
-                                    <button class="btn btn-default">+</button>
-                                </div>
+                                    <div class="product-footer-right">
+                                        <button class="btn btn-default">+</button>
+                                    </div>
+                                @else
+                                    <div class="product-footer-left">
+                                        <span>Out of stock</span>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
