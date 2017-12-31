@@ -11,91 +11,28 @@ class ProductTableSeeder extends Seeder {
      */
     public function run() {
         DB::table('product')->insert([
-            'name' => 'Hoodie - Pink',
-            'description' => '80% Cotton, 20% Polyester, Ribbed Cuffs and Hem, Twin Needle Stitching',
+            'name' => 'Longline Tee - Khaki',
+            'description' => 'Quality material, Modern fit',
             'price' => 20.00,
             'categoryId' => 1,
-            'imagePath' => 'images/items/pinkHoodie1.png',
+            'imagePath' => 'images/items/caponeLonglineKhaki.png',
         ]);
 
         DB::table('product')->insert([
-            'name' => 'Hoodie - Grey',
-            'description' => '80% Cotton, 20% Polyester, Ribbed Cuffs and Hem, Twin Needle Stitching',
-            'price' => 20.00,
-            'categoryId' => 1,
-            'imagePath' => 'images/items/greyHoodie1.png',
+            'name' => 'Pink Suede Cap',
+            'description' => 'Suede Cap with adjustable plastic strap at the rear.',
+            'price' => 10.00,
+            'categoryId' => 5,
+            'imagePath' => 'images/items/pinkSuedeHat2.png',
         ]);
 
         DB::table('product')->insert([
-            'name' => 'Hoodie - Tanned',
-            'description' => '80% Cotton, 20% Polyester, Ribbed Cuffs and Hem, Twin Needle Stitching',
-            'price' => 20.00,
-            'categoryId' => 1,
-            'imagePath' => 'images/items/tannedHoodie2.png',
+            'name' => 'Grey Suede Cap',
+            'description' => 'Suede Cap with adjustable plastic strap at the rear',
+            'price' => 10.00,
+            'categoryId' => 5,
+            'imagePath' => 'images/items/greySuedeHat.png',
         ]);
 
-        DB::table('product')->insert([
-            'name' => 'Fitted Tee - Blue',
-            'description' => '100% Ringspun Semi-Combed Cotton, Tapered Fit, Ribbed Collar, Twin Needle Stitching',
-            'price' => 15.00,
-            'categoryId' => 2,
-            'imagePath' => 'images/items/blueTee1.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Fitted Tee - Black',
-            'description' => '100% Ringspun Semi-Combed Cotton, Tapered Fit, Ribbed Collar, Twin Needle Stitching',
-            'price' => 15.00,
-            'categoryId' => 2,
-            'imagePath' => 'images/items/caponeBlackTee.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Fitted Tee - White',
-            'description' => '100% Ringspun Semi-Combed Cotton, Tapered Fit, Ribbed Collar, Twin Needle Stitching',
-            'price' => 15.00,
-            'categoryId' => 2,
-            'imagePath' => 'images/items/caponeWhiteTee.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Joggers - Grey',
-            'description' => '80% Cotton, 20% Polyester, Modern Slim Fit, Soft Cotton Faced Fabric',
-            'price' => 20.00,
-            'categoryId' => 3,
-            'imagePath' => 'images/items/greyJoggers.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Joggers - Black',
-            'description' => '80% Cotton, 20% Polyester, Modern Slim Fit, Soft Cotton Faced Fabric',
-            'price' => 20.00,
-            'categoryId' => 3,
-            'imagePath' => 'images/items/comingSoon.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Longline Raglan - Light Grey',
-            'description' => '100% Cotton, Dual coloured short sleeves',
-            'price' => 20.00,
-            'categoryId' => 2,
-            'imagePath' => 'images/items/longLineRaglan2.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Classic Fitted Vest - White',
-            'description' => '60% cotton/40% polyester, Single jersey, Ribbed collar, Raw edged armholes and hem',
-            'price' => 15.00,
-            'categoryId' => 4,
-            'imagePath' => 'images/items/whiteClassicVest.png',
-        ]);
-
-        DB::table('product')->insert([
-            'name' => 'Classic Fitted Vest - Black',
-            'description' => '60% cotton/40% polyester, Single jersey, Ribbed collar, Raw edged armholes and hem',
-            'price' => 15.00,
-            'categoryId' => 4,
-            'imagePath' => 'images/items/comingSoon.png',
-        ]);
     }
 }

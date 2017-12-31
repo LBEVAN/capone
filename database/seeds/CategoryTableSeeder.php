@@ -29,5 +29,10 @@ class CategoryTableSeeder extends Seeder {
             'description' => 'Vests',
             'code' => 'VEST',
         ]);
+
+        DB::table('category')->insert([
+            'description' => 'Hats',
+            'code' => 'HATS',
+        ]);
     }
 }

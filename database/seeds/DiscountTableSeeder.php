@@ -12,22 +12,7 @@ class DiscountTableSeeder extends Seeder
     public function run()
     {
         DB::table('discount')->insert([
-            'discountCode' => 'teamcapone',
-            'discountPercentage' => 30.00,
-        ]);
-
-        DB::table('discount')->insert([
-            'discountCode' => 'lwalker10',
-            'discountPercentage' => 10.00,
-        ]);
-
-        DB::table('discount')->insert([
-            'discountCode' => 'dglynn10',
-            'discountPercentage' => 10.00,
-        ]);
-
-        DB::table('discount')->insert([
-            'discountCode' => 'tlangabeer10',
+            'discountCode' => 'SNFM10',
             'discountPercentage' => 10.00,
         ]);
 
@@ -35,5 +20,11 @@ class DiscountTableSeeder extends Seeder
             'discountCode' => 'lpreece10',
             'discountPercentage' => 10.00,
         ]);
+
+        DB::table('discount')->insert([
+            'discountCode' => 'BOXING20',
+            'discountPercentage' => 20.00,
+        ]);
+
     }
 }

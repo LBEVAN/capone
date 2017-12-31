@@ -15,11 +15,5 @@ class ShippingOptionTableSeeder extends Seeder {
             'code' => 'STD',
             'price' => 3.50,
         ]);
-
-        DB::table('shippingOption')->insert([
-            'description' => 'Express (1 - 2 working days)',
-            'code' => 'EXP',
-            'price' => 6.50,
-        ]);
     }
 }

@@ -29,5 +29,10 @@ class SizeTableSeeder extends Seeder {
             'description' => 'X-Large',
             'code' => 'XL',
         ]);
+
+        DB::table('size')->insert([
+            'description' => 'One Size',
+            'code' => 'ONE',
+        ]);
     }
 }

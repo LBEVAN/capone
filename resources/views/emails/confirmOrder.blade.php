@@ -68,7 +68,7 @@
                 <td></td>
                 <td></td>
                 <td style="text-align: left;"><strong>Total price</strong></td>
-                <td style="text-align: left;"><strong>£{{ $items->getTotalPrice() }}</strong></td>
+                <td style="text-align: left;"><strong>£{{ $order->getTotal() }}</strong></td>
             </tr>
         </table>
     </div>

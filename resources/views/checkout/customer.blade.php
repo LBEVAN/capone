@@ -89,8 +89,8 @@
 
             <div class="row">
                 <div class="col-md-12 .col-md-8">
-                    <button type="submit" class="btn btn-primary pull-right" id="btnContinueToShipping">
-                        Continue to shipping
+                    <button type="submit" class="btn btn-primary pull-right" id="btnContinueToPayment">
+                        Continue Checkout
                     </button>
                 </div>
             </div>

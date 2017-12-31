@@ -18,6 +18,7 @@ class CheckoutPaymentComposer {
      * @return void
      */
     public function compose(View $view) {
+        $view->with('shippingOptions', $this->referenceDataRepository->getShippingOptions());
         $view->with('paymentOptions', $this->referenceDataRepository->getPaymentOptions());
     }
 }

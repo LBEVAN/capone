@@ -61,40 +61,9 @@ class CheckoutController extends Controller {
 
         session(['order' => $order]);
 
-        return redirect('checkout/shipping');
-    }
-
-    /**
-     * Return the shipping information page.
-     *
-     * @return Response
-     */
-    public function gotoShipping() {
-        return View::make('checkout/shipping');
-    }
-
-    /**
-     * Complete the shipping information step.
-     *
-     * @param Request $request
-     * @return mixed
-     */
-    public function completeShipping(Request $request) {
-        $validator = Validator::make($request->all(), [
-            'shippingOption' => 'required|exists:shippingOption,id',
-        ]);
-
-        if($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->with('shippingOptions', $request->old('shippingOptions'));
-        }
-
-        $order = session('order');
-        $order->shippingOption = $this->referenceDataRepository->getShippingOptionById($request->get('shippingOption'));
-        session(['order' => $order]);
-
-
         return redirect('checkout/payment');
     }
+
 
     /**
      * Return the payment information page.
@@ -112,11 +81,19 @@ class CheckoutController extends Controller {
      * @return mixed
      */
     public function completePayment(Request $request) {
-        Validator::make($request->all(), [
+
+        $validator = Validator::make($request->all(), [
             'paymentOption' => 'required|exists:paymentOption,id',
-        ])->validate();
+            'shippingOption' => 'required|exists:shippingOption,id',
+        ]);
+
+        if($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->with('shippingOptions', $request->old('shippingOptions'));
+            return redirect()->back()->withErrors($validator)->with('paymentOptions', $request->old('paymentOptions'));            
+        }
 
         $order = session('order');
+        $order->shippingOption = $this->referenceDataRepository->getShippingOptionById($request->get('shippingOption'));
         $order->paymentOption = $this->referenceDataRepository->getPaymentOptionById($request->get('paymentOption'));
         session(['order' => $order]);
 

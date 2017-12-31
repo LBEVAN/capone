@@ -52,17 +52,16 @@
                         col-sm-8 col-sm-offset-0 
                             col-md-8 col-md-offset-0 
                                 col-lg-8 col-lg-offset-0">
-            <h2 class="featurette-heading">SWANSEA'S NEXT FITNESS MODEL</h2>
+            <h2 class="featurette-heading">CLEARANCE SALE!!</h2>
             <p class="lead">
-                This year we will be sponsoring the Swansea Next Fitness Model.
-                We'll be giving prizes to 1st, 2nd and 3rd places and there will also be a stall set up on the day.
+                As we prepare for the arrival of new stock of new styles,
+                everything on our website is HALF PRICE!
             </p>
             <p class="lead">
-                This is a rewarding event for everyone involved, 
-                from bringing the community together in such a positive way to starting careers in the fitness industry.
+                The most expensive item is only &#163;10. Check it out by clicking 'STORE' above.
             </p>
             <p class="lead"> 
-                Come join us in Swansea at The Penyrheol Theatre on Saturday 30th September - We can't wait to see you there! 
+                 We can't wait for you to see some of our new stock which will be launching very soon.
             </p>
         </div>
         <div class="col-xs-10 col-xs-offset-1 
@@ -70,9 +69,7 @@
                             col-md-4 col-md-offset-0
                                 col-lg-4 col-lg-offset-0">
             <div class="lpanel">
-                <a href="http://www.nextfitnessmodeluk.com/">
-                    <img src="images/caponeSwanseaNTM.png" class="large-panel"> 
-                </a>
+            	<img src="images/newStock.png" class="large-panel"> 
             </div>
         </div>
     </div>

@@ -5,10 +5,10 @@
     <div class="row" style="text-align: center; margin-top: 30px;">
         <div style="margin-bottom: 20px;">
             <h3 style="text-align: center;"> AN ORDER HAS BEEN PLACED </h3>
-            <p> There has been an order placed, please see the below items and quantities </p>
+            <p> An has been an order placed, please see the below items and quantities. </p>
             
             <p> WARNING!! At the momemnt discount shows only at the final price.</p>
-            <p>  Please see the bleow setails and send the items accordingly</p>
+            <p> Please see the below details and send the items accordingly</p>
         </div>
 
         <table style="text-align: left; margin-bottom: 20px; width: 20%;">
@@ -19,6 +19,14 @@
             <tr>
                 <th></th>
                 <td></td>
+            </tr>
+            <tr>                
+                     <th style="margin-right; 15px;">Email:</th>                
+                     <td>{{ $email }}</td>            
+            </tr>            
+            <tr>                 
+                     <th></th>                
+                     <td></td>             
             </tr>
             <tr>
                 <th rowspan="3" style="vertical-align: top;">Address:</th>
@@ -68,7 +76,7 @@
                 <td></td>
                 <td></td>
                 <td style="text-align: left;"><strong>Total price</strong></td>
-                <td style="text-align: left;"><strong>£{{ $items->getTotalPrice() }}</strong></td>
+                <td style="text-align: left;"><strong>£{{ $order->getTotal() }}</strong></td>
             </tr>
         </table>
     </div>

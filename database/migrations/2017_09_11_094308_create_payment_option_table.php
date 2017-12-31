@@ -16,6 +16,7 @@ class CreatePaymentOptionTable extends Migration {
             $table->increments('id');
             $table->string('description');
             $table->string('code');
+            $table->string('icon');
             $table->timestamps();
         });
     }

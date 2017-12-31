@@ -13,6 +13,13 @@ class PaymentOptionTableSeeder extends Seeder {
         DB::table('paymentOption')->insert([
             'description' => 'PayPal',
             'code' => 'PPL',
+            'icon' => 'fa fa-cc-paypal fa-2x'
+        ]);
+
+        DB::table('paymentOption')->insert([
+            'description' => 'Debit or Credit Card',
+            'code' => 'DCC',
+            'icon' => 'glyphicon glyphicon-credit-card fa-2x'
         ]);
     }
 }
