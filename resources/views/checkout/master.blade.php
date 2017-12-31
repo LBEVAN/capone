@@ -77,21 +77,31 @@
                 </div>
             </div>
 
+            @if(session('order') && session('order')->discount && session('order')->shippingOption)
             <div class="row totals">
                 <div class="row">
                     <div class="col-md-12 .col-md-8">
                         <div class="total">
                             <label>Discount Amount</label>
-                            @if(session('order'))
-                                <label>£{{ number_format(session('cart')->getTotalPrice() - session('order')->getTotal() + session('order')->shippingOption->price, 2) }}</label>
-                            @else
-                                <label>--</label>
-                            @endif
-
+                                <label>£{{ number_format(session('cart')->getTotalPrice() - session('order')->getTotal() + session('order')->shippingOption->price, 2) }}</label>                               
                         </div>
                     </div>
                 </div>
             </div>
+            @elseif (session('order') && session('order')->discount)
+            <div class="row totals">
+                <div class="row">
+                    <div class="col-md-12 .col-md-8">
+                        <div class="total">
+                            <label>Discount Amount</label>
+                            <label>£{{ number_format(session('cart')->getTotalPrice() - session('order')->getTotal(), 2) }}</label>                               
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @else
+
+            @endif
 
             <div class="row totals">
                 <div class="row">
